@@ -1,5 +1,7 @@
 # Employer Portal (Laravel)
 
+[![CI](https://github.com/Fhionnghaile/laravel-portal/actions/workflows/ci.yml/badge.svg)](https://github.com/Fhionnghaile/laravel-portal/actions/workflows/ci.yml) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Fhionnghaile/laravel-portal/badge)](https://scorecard.dev/viewer/?uri=github.com/Fhionnghaile/laravel-portal)
+
 A PHP/Laravel portal where employers request candidate credentials, candidates grant a
 **scoped, time-limited** share, and the portal verifies the credential via **Veritas**.
 Complements the Veritas verifiable-credentials service.

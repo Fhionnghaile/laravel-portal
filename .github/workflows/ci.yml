@@ -1,0 +1,15 @@
+name: CI
+on: { push: { branches: [main] }, pull_request: {}, schedule: [{ cron: "38 6 * * 1" }], workflow_dispatch: {} }
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with: { php-version: "8.3", extensions: "sqlite3, pdo_sqlite" }
+      - run: composer install --no-interaction --no-progress
+      - run: cp .env.example .env && php artisan key:generate
+      - run: php artisan test
+      - run: php tests/Unit/run_domain_tests.php
