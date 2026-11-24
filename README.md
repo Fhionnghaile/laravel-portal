@@ -56,12 +56,15 @@ php artisan test            # Pest: domain, policy (403), verification flow, que
 php artisan serve
 ```
 
-## Verification status (honest note)
+## Verification status
 
-The full Pest suite (`tests/Feature`, `tests/Unit/ShareGrantTest.php`) requires
-`composer install`, which needs Packagist access. In the sandbox this repo was built in,
-Packagist egress was blocked, so **the framework-independent domain logic was verified
-with a plain-PHP runner** (`php tests/Unit/run_domain_tests.php` → 13/13 green) and
-**every PHP file passes `php -l`**. The Pest tests mirror those domain assertions and add
-the policy/queue/HTTP-layer coverage; run them with `php artisan test` once dependencies
-are installed.
+The full Pest suite was run for real on 24 Nov 2026 (`composer install` + `php artisan test` in a clean
+Docker container): **12 passed (16 assertions)**, covering the domain, the policy (403) paths, the
+verification flow and the queue. The plain-PHP domain runner (`php tests/Unit/run_domain_tests.php`)
+reports **13/13**.
+
+That first real run found two gaps the README had not predicted: the repo carried only the
+application layer, so Laravel's base `users` migration and the `storage/` skeleton were missing,
+and 7 of the 12 tests failed. Both are now in the repo
+(`database/migrations/0001_01_01_000000_create_users_table.php`, `storage/`), and `phpunit.xml`
+sets the standard in-memory test drivers.

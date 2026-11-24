@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="847" height="674" viewBox="0 0 847 674" role="img" aria-label="laravel-portal — real test run, captured 24 Nov 2026">
+<rect width="847" height="674" rx="10" fill="#0f172a"/>
+<rect width="847" height="32" rx="10" fill="#1e293b"/><rect y="22" width="847" height="10" fill="#1e293b"/>
+<circle cx="18" cy="16" r="6" fill="#ef4444"/><circle cx="38" cy="16" r="6" fill="#f59e0b"/><circle cx="58" cy="16" r="6" fill="#22c55e"/>
+<text x="423.5" y="21" text-anchor="middle" font-family="ui-sans-serif,Segoe UI,Arial" font-size="12" fill="#cbd5e1">laravel-portal — real test run, captured 24 Nov 2026</text>
+<g font-family="ui-monospace,Consolas,Menlo,monospace" font-size="13">
+<text x="18" y="50" fill="#7dd3fc" xml:space="preserve">$ composer install -q --no-interaction 2&gt;&amp;1 | tail -2; cp .env.example .env &amp;&amp; php artisan key:generate…</text>
+<text x="18" y="68" fill="#94a3b8" xml:space="preserve">   … 7 lines omitted …</text>
+<text x="18" y="86" fill="#e2e8f0" xml:space="preserve"></text>
+<text x="18" y="104" fill="#e2e8f0" xml:space="preserve">   PASS  Tests\Feature\CredentialRequestPolicyTest</text>
+<text x="18" y="122" fill="#e2e8f0" xml:space="preserve">  ✓ it lets an employer create a request                                 0.16s  </text>
+<text x="18" y="140" fill="#e2e8f0" xml:space="preserve">  ✓ it forbids a non-employer from creating a request (403)              0.03s  </text>
+<text x="18" y="158" fill="#e2e8f0" xml:space="preserve">  ✓ it forbids viewing another employer’s request                        0.02s  </text>
+<text x="18" y="176" fill="#e2e8f0" xml:space="preserve"></text>
+<text x="18" y="194" fill="#e2e8f0" xml:space="preserve">   PASS  Tests\Feature\VerificationFlowTest</text>
+<text x="18" y="212" fill="#e2e8f0" xml:space="preserve">  ✓ it dispatches the verification job when a candidate approves         0.03s  </text>
+<text x="18" y="230" fill="#e2e8f0" xml:space="preserve">  ✓ it records a valid outcome for a good credential (mocked Veritas)    0.02s  </text>
+<text x="18" y="248" fill="#e2e8f0" xml:space="preserve">  ✓ it records invalid for a tampered credential                         0.02s  </text>
+<text x="18" y="266" fill="#e2e8f0" xml:space="preserve">  ✓ it rejects verification under an expired grant                       0.01s  </text>
+<text x="18" y="284" fill="#e2e8f0" xml:space="preserve"></text>
+<text x="18" y="302" fill="#86efac" xml:space="preserve">  Tests:    12 passed (16 assertions)</text>
+<text x="18" y="320" fill="#e2e8f0" xml:space="preserve">  Duration: 0.46s</text>
+<text x="18" y="338" fill="#e2e8f0" xml:space="preserve"></text>
+<text x="18" y="356" fill="#e2e8f0" xml:space="preserve"></text>
+<text x="18" y="374" fill="#e2e8f0" xml:space="preserve">  ✓ live grant permits an in-scope claim</text>
+<text x="18" y="392" fill="#e2e8f0" xml:space="preserve">  ✓ live grant denies an out-of-scope claim</text>
+<text x="18" y="410" fill="#e2e8f0" xml:space="preserve">  ✓ expired grant denies everything</text>
+<text x="18" y="428" fill="#e2e8f0" xml:space="preserve">  ✓ expired detection at boundary</text>
+<text x="18" y="446" fill="#e2e8f0" xml:space="preserve">  ✓ revoked grant denies</text>
+<text x="18" y="464" fill="#e2e8f0" xml:space="preserve">  ✓ permitsAll true when all in scope</text>
+<text x="18" y="482" fill="#e2e8f0" xml:space="preserve">  ✓ permitsAll false on over-scope request</text>
+<text x="18" y="500" fill="#e2e8f0" xml:space="preserve">  ✓ permitsAll false on empty request</text>
+<text x="18" y="518" fill="#e2e8f0" xml:space="preserve">  ✓ valid credential -&gt; valid</text>
+<text x="18" y="536" fill="#e2e8f0" xml:space="preserve">  ✓ tampered credential -&gt; invalid</text>
+<text x="18" y="554" fill="#e2e8f0" xml:space="preserve">  ✓ malformed credential -&gt; error</text>
+<text x="18" y="572" fill="#e2e8f0" xml:space="preserve">  ✓ revoked credential -&gt; revoked</text>
+<text x="18" y="590" fill="#e2e8f0" xml:space="preserve">  ✓ outcome.isAcceptable only for Valid</text>
+<text x="18" y="608" fill="#e2e8f0" xml:space="preserve"></text>
+<text x="18" y="626" fill="#86efac" xml:space="preserve">13 checks, 0 failed</text>
+<text x="18" y="644" fill="#e2e8f0" xml:space="preserve">[exit 0]</text>
+</g></svg>
